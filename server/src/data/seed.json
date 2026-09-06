@@ -1,0 +1,662 @@
+{
+  "attractions": [
+    {
+      "id": "terracotta-army",
+      "slug": "terracotta-army",
+      "order": 1,
+      "coords": {
+        "lat": 34.3841,
+        "lng": 109.2785
+      },
+      "emoji": "🗿",
+      "accent": "#b0813f",
+      "image": "/images/attractions/terracotta-army.jpg",
+      "name": {
+        "zh-CN": "秦始皇兵马俑",
+        "ms-MY": "Tentera Terakota",
+        "en-US": "Terracotta Army"
+      },
+      "intro": {
+        "zh-CN": "兵马俑位于西安市临潼区，是秦始皇陵的陪葬坑，被誉为“世界第八大奇迹”，1974 年由当地农民打井时偶然发现。",
+        "ms-MY": "Tentera Terakota terletak di Daerah Lintong, Xi'an, merupakan lubang peneman makam Maharaja Qin, digelar 'Keajaiban Kelapan Dunia', ditemui secara tidak sengaja pada tahun 1974 oleh petani tempatan semasa menggali perigi.",
+        "en-US": "The Terracotta Army sits in Lintong District, Xi'an, serving as the burial pits of the tomb of Qin Shi Huang. Hailed as the \"Eighth Wonder of the World\", it was accidentally discovered by farmers in 1974."
+      },
+      "track": {
+        "title": {
+          "zh-CN": "语音讲解",
+          "ms-MY": "Panduan audio",
+          "en-US": "Audio Guide"
+        },
+        "transcript": {
+          "zh-CN": [
+            "欢迎来到秦始皇兵马俑，这里被誉为“世界第八大奇迹”。",
+            "1974年3月，陕西临潼西杨村的几个农民在打井时，无意间挖出了一个陶俑头，沉睡两千多年的地下军团由此重见天日。",
+            "你现在看到的是一号坑，三个坑中最大的一个，长230米、宽62米，六千多尊与真人真马一般大小的陶俑整齐列阵、面向东方。",
+            "离开一号坑，是布局更复杂的二号坑，车兵、步兵、骑兵协同作战；1999年这里出土的彩绘跪射俑保存完好、色彩鲜艳。",
+            "最小的三号坑被认为是整个军团的指挥部，坑内还出土了一件其他坑从未见过的鹿角。",
+            "工匠们用泥条盘筑出身体，再雕刻五官和铠甲；仔细观察你会发现，没有两个陶俑的面孔完全相同。",
+            "参观完，不妨去陈列厅看看那两乘彩绘铜车马，它们是目前出土最精美、最复杂的秦代青铜器。"
+          ],
+          "ms-MY": [
+            "Selamat datang ke Tentera Terakota, yang digelar 'Keajaiban Kelapan Dunia'.",
+            "Pada Mac 1974, beberapa petani di Kampung Xiyang, Lintong, terjumpa kepala patung tanah liat ketika menggali perigi — tanpa disedari mereka menemui tentera bawah tanah yang telah senyap selama lebih dua ribu tahun.",
+            "Anda kini melihat Lubang 1, yang terbesar antara tiga lubang, 230 meter panjang dan 62 meter lebar, dengan lebih enam ribu patung pahlawan dan kuda bersaiz manusia sebenar tersusun menghadap ke timur.",
+            "Lubang 2 lebih kecil tetapi susun aturnya lebih kompleks, menggabungkan tentera kereta kuda, infantri dan pasukan berkuda; pada 1999 patung pemanah berlutut berwarna yang terpelihara baik ditemui di sini.",
+            "Lubang 3, yang paling kecil, dianggap pusat perintah tentera, di mana tanduk rusa — yang tidak pernah ditemui di lubang lain — juga dijumpai.",
+            "Tukang membina setiap patung dengan melingkar tanah liat menjadi badan, kemudian mengukir wajah dan perisai; perhatikan betul-betul, tiada dua wajah yang sama.",
+            "Sebelum beredar, lawati dewan pameran untuk melihat dua kereta kuda gangsa berwarna — gangsa Qin terbaik dan paling rumit yang pernah ditemui."
+          ],
+          "en-US": [
+            "Welcome to the Terracotta Army, hailed as the \"Eighth Wonder of the World\".",
+            "In March 1974, farmers digging a well in Xiyang Village, Lintong, unearthed a clay head — unintentionally revealing an underground army that had lain silent for over two thousand years.",
+            "You are now looking at Pit 1, the largest of the three, 230 meters long and 62 meters wide, with more than six thousand life-sized warriors and horses standing in formation, facing east.",
+            "Pit 2 is smaller but more complex in layout, combining chariots, infantry and cavalry; in 1999 a well-preserved, vividly colored kneeling archer was unearthed here.",
+            "Pit 3, the smallest, is regarded as the army's command center, where a deer antler — never seen in the other pits — was also found.",
+            "Craftsmen built each figure by coiling clay into the body, then carving the face and armor; look closely and you will see no two faces are alike.",
+            "Before you leave, visit the exhibition hall to see the two painted bronze chariots — the finest and most complex Qin bronzes ever unearthed."
+          ]
+        },
+        "duration": 90
+      },
+      "spots": [
+        {
+          "slug": "pit-1",
+          "order": 1,
+          "emoji": "🏺",
+          "image": "/images/spots/pit-1.webp",
+          "name": {
+            "zh-CN": "一号坑",
+            "ms-MY": "Lubang 1",
+            "en-US": "Pit 1"
+          },
+          "transcript": {
+            "zh-CN": [
+              "一号坑是兵马俑最早发现、规模最大的坑，面积约一万四千多平方米，长230米、宽62米。",
+              "六千多尊与真人等大的陶俑、陶马排列成气势磅礴的步兵方阵，前方是前锋，后面是主力，左右两侧和后侧还有侧翼与后卫。",
+              "站在观景台上俯瞰，仿佛穿越回两千多年前的秦朝军阵。"
+            ],
+            "ms-MY": [
+              "Lubang 1 ialah lubang yang paling awal ditemui dan terbesar, seluas kira-kira 14,000 meter persegi — 230 meter panjang dan 62 meter lebar.",
+              "Lebih enam ribu patung pahlawan dan kuda bersaiz manusia sebenar membentuk barisan infantri yang gagah: barisan hadapan di depan, pasukan utama di belakang, dengan pengawal sisi dan belakang.",
+              "Melihat dari pelantar tontonan, anda seolah-olah kembali ke formasi tentera Qin dua ribu tahun dahulu."
+            ],
+            "en-US": [
+              "Pit 1 is the first-discovered and largest pit, covering about 14,000 square meters — 230 meters long and 62 meters wide.",
+              "More than six thousand life-sized warriors and horses form a majestic infantry formation: vanguard in front, main force behind, with flanking and rear guards on the sides.",
+              "Looking down from the viewing platform, you feel transported to a Qin battle formation of two millennia ago."
+            ]
+          },
+          "duration": 55
+        },
+        {
+          "slug": "pit-2",
+          "order": 2,
+          "emoji": "🐎",
+          "image": "/images/spots/pit-2.webp",
+          "name": {
+            "zh-CN": "二号坑",
+            "ms-MY": "Lubang 2",
+            "en-US": "Pit 2"
+          },
+          "transcript": {
+            "zh-CN": [
+              "二号坑以军阵最全著称，包含车兵、骑兵、步兵、弩兵等多种兵种，是车、步、骑协同作战的完整军阵。",
+              "1999年，考古人员在这里发现了保存完好的彩绘跪射俑，姿态各异、色彩鲜艳，是兵马俑中艺术价值最高的精品之一。",
+              "它是研究秦朝军事编制与战术的重要实物资料。"
+            ],
+            "ms-MY": [
+              "Lubang 2 terkenal dengan formasi tentera paling lengkap, menggabungkan tentera kereta kuda, pasukan berkuda, infantri dan pemanah panah dalam satu barisan yang teratur.",
+              "Pada 1999 ahli arkeologi menemui patung pemanah berlutut berwarna yang terpelihara baik di sini — antara karya seni terbaik Tentera Terakota.",
+              "Ia bahan penting untuk mengkaji organisasi dan taktik ketenteraan Dinasti Qin."
+            ],
+            "en-US": [
+              "Pit 2 is famed for the most complete battle formation, combining charioteers, cavalry, infantry and crossbowmen in a coordinated array.",
+              "In 1999 archaeologists unearthed a well-preserved, colorfully painted kneeling archer here — one of the finest artistic masterpieces among the warriors.",
+              "It is key evidence for studying the Qin army's organization and tactics."
+            ]
+          },
+          "duration": 55
+        },
+        {
+          "slug": "pit-3",
+          "order": 3,
+          "emoji": "🎖️",
+          "image": "/images/spots/pit-3.webp",
+          "name": {
+            "zh-CN": "三号坑",
+            "ms-MY": "Lubang 3",
+            "en-US": "Pit 3"
+          },
+          "transcript": {
+            "zh-CN": [
+              "三号坑面积最小，只有约五百平方米，相当于一号坑的四十分之一。",
+              "这里没有成千上万的士兵，只出土了几十件多为军官形象的陶俑，还有一件其他坑从未见过的鹿角。",
+              "有学者认为它是地下军团的最高指挥部，但许多疑问至今没有答案——它更像一个充满问号的地方。"
+            ],
+            "ms-MY": [
+              "Lubang 3 ialah yang paling kecil, hanya kira-kira 500 meter persegi — satu per empat puluh daripada Lubang 1.",
+              "Tiada beribu-ribu askar di sini, hanya beberapa dozen patung, kebanyakannya pegawai, ditambah tanduk rusa yang tidak pernah dilihat di lubang lain.",
+              "Sesetengah sarjana percaya ia pusat perintah tertinggi tentera, tetapi banyak persoalan masih belum terjawab — ia lebih seperti tempat penuh tanda tanya."
+            ],
+            "en-US": [
+              "Pit 3 is the smallest, only about 500 square meters — a fortieth of Pit 1.",
+              "It holds no thousands of soldiers, only a few dozen figures, mostly officers, plus a deer antler never seen in the other pits.",
+              "Some scholars believe it was the army's supreme command post, but many questions remain unanswered — it feels more like a place full of question marks."
+            ]
+          },
+          "duration": 52
+        },
+        {
+          "slug": "bronze-chariots",
+          "order": 4,
+          "emoji": "🛞",
+          "image": "/images/spots/bronze-chariots.png",
+          "name": {
+            "zh-CN": "铜车马展厅",
+            "ms-MY": "Dewan Kereta Kuda Gangsa",
+            "en-US": "Bronze Chariots and Horses Exhibition Hall"
+          },
+          "transcript": {
+            "zh-CN": [
+              "铜车马展厅陈列着两乘彩绘铜车马，被誉为“青铜之冠”。",
+              "1980年，考古队在秦始皇陵西侧出土了它们，每乘由四匹铜马牵引，工艺繁复、结构精密。",
+              "它们是目前出土的秦代文物中最精美、最复杂的青铜器，也是秦始皇陵出土的国宝级文物。"
+            ],
+            "ms-MY": [
+              "Dewan Kereta Kuda Gangsa mempamerkan dua kereta kuda gangsa berwarna, digelar 'mahkota gangsa'.",
+              "Ditemui pada 1980 di sebelah barat makam Maharaja Qin Shi Huang, setiap satu ditarik empat kuda gangsa dan dibina dengan ketukangan yang rumit dan teliti.",
+              "Ia gangsa Qin terbaik dan paling rumit yang pernah ditemui — khazanah negara dari makam maharaja."
+            ],
+            "en-US": [
+              "The Bronze Chariots hall displays two painted bronze chariots, hailed as the \"crown of bronze\".",
+              "Unearthed in 1980 to the west of Qin Shi Huang's mausoleum, each is drawn by four bronze horses and built with intricate, precise craftsmanship.",
+              "They are the finest and most complex Qin bronzes ever found — national treasures from the emperor's tomb."
+            ]
+          },
+          "duration": 55
+        }
+      ],
+      "tips": {
+        "zh-CN": {
+          "openHours": "8:30–17:00（旺季至 18:00）",
+          "ticketPrice": "120 元 / 人",
+          "suggestedDuration": "2–3 小时",
+          "transport": "地铁 9 号线“秦陵西站”，换乘游 5 / 306 路公交",
+          "tips": "建议请讲解或使用本导览，避开节假日高峰；夏季注意防晒补水。"
+        },
+        "ms-MY": {
+          "openHours": "8:30–17:00 (hingga 18:00 pada musim puncak)",
+          "ticketPrice": "120 yuan / orang",
+          "suggestedDuration": "2–3 jam",
+          "transport": "Stesen 'Qinling West' Laluan Metro 9, tukar ke bas pelancongan 5 / 306",
+          "tips": "Disarankan untuk mengupah panduan atau menggunakan panduan ini, elakkan waktu puncak cuti; pada musim panas, berhati-hati dengan panas dan minum air secukupnya."
+        },
+        "en-US": {
+          "openHours": "8:30–17:00 (until 18:00 in peak season)",
+          "ticketPrice": "120 yuan / person",
+          "suggestedDuration": "2–3 hours",
+          "transport": "Metro Line 9 to Qinling West Station, then bus 306",
+          "tips": "Hire a guide or use the audio guide; avoid peak holidays; bring water and sun protection."
+        }
+      }
+    },
+    {
+      "id": "muslim-quarter",
+      "slug": "muslim-quarter",
+      "order": 2,
+      "coords": {
+        "lat": 34.2623,
+        "lng": 108.9398
+      },
+      "emoji": "🍢",
+      "accent": "#d35400",
+      "image": "/images/attractions/muslim-quarter.webp",
+      "name": {
+        "zh-CN": "回民街",
+        "ms-MY": "Jalan Huimin",
+        "en-US": "Muslim Quarter"
+      },
+      "intro": {
+        "zh-CN": "回民街位于西安钟楼鼓楼附近，是西安最著名的美食街区，汇集了羊肉泡馍、肉夹馍、凉皮等地道小吃，充满浓郁的市井烟火气。",
+        "ms-MY": "Jalan Huimin terletak berhampiran Menara Loceng dan Menara Gendang Xi'an, merupakan kawasan makanan paling terkenal di Xi'an, mengumpulkan pelbagai makanan tempatan seperti paomo kambing, roujiamo, liangpi, dipenuhi dengan suasana pasar yang meriah.",
+        "en-US": "The Muslim Quarter lies near the Bell and Drum Towers, Xi'an's most famous food street, gathering local delicacies such as lamb paomo and roujiamo amid a lively market atmosphere."
+      },
+      "track": {
+        "title": {
+          "zh-CN": "语音讲解",
+          "ms-MY": "Panduan audio",
+          "en-US": "Audio Guide"
+        },
+        "transcript": {
+          "zh-CN": [
+            "欢迎来到回民街，西安最有烟火气的地方。",
+            "一千多年前，阿拉伯和波斯的商人沿丝绸之路来到长安，在此定居，他们的后代世代生活在这片区域，形成了今天的穆斯林社区。",
+            "你现在走的这条街叫北院门，是回民街的主街，青石铺路、店铺林立；而真正的“回坊”由北广济街、化觉巷、洒金桥等多条街巷连成一大片，逛上两三个小时也走不完。",
+            "这里生活着超过六万回族穆斯林，戴白帽的老人在门口聊天，妇女在店里忙着做小吃，孩子在小巷间嬉戏——这是一个真正活了一千多年的老社区。",
+            "回坊里散落着大大小小十座清真寺，最有名的是化觉巷清真大寺，中式飞檐里藏着阿拉伯文的伊斯兰图案，两种风格浑然一体。",
+            "论吃，这里是西北清真美食最集中的地方，近三百种小吃挤满街道：牛羊肉泡馍、肉夹馍、甑糕、柿子饼……香气混在一起，很难空着手走出去。",
+            "吃泡馍急不得，馍要自己掰成黄豆大小、越小越入味，掰完一碗得二十分钟——这种“慢”，就是回民街的节奏。回民街不收门票，从鼓楼旁拐进去就是，全天开放。"
+          ],
+          "ms-MY": [
+            "Selamat datang ke Jalan Huimin, sudut Xi'an yang paling meriah dan penuh kehidupan.",
+            "Lebih seribu tahun dahulu, pedagang Arab dan Parsi datang ke Chang'an melalui Jalan Sutera dan menetap di sini; keturunan mereka masih tinggal di kawasan ini, membentuk komuniti Muslim bandar.",
+            "Jalan yang anda lalui ini, Beiyuanmen, ialah jalan utama, diturap batu dan dipenuhi kedai; 'kawasan Hui' yang sebenar ialah jaringan lorong yang jauh lebih luas — Jalan Beiguangji, Lorong Huajue, Sajinqiao — yang mengambil dua hingga tiga jam untuk dijelajahi.",
+            "Lebih enam puluh ribu Muslim Hui tinggal di sini: orang tua berkopiah putih berbual di depan pintu, wanita sibuk membuat makanan ringan, dan kanak-kanak berlari di lorong sempit — sebuah komuniti lama yang benar-benar hidup lebih seribu tahun.",
+            "Terdapat sepuluh masjid besar dan kecil berselerak di kawasan ini; yang paling terkenal, Masjid Lorong Huajue, menyembunyikan corak Islam Arab di dalam atap melengkung Cina, kedua-dua gaya bercantum sebati.",
+            "Untuk makanan, ini pusat masakan halal barat laut yang paling padat, dengan hampir tiga ratus jenis makanan ringan memenuhi jalan: paomo kambing, roujiamo, zenggao, kuih kesemak — aromanya bercampur, sukar untuk keluar dengan tangan kosong.",
+            "Makan paomo tidak boleh tergesa-gesa: anda mengoyak roti menjadi kepingan sebesar kacang pea sendiri — semakin kecil semakin sedap — semangkuk mengambil masa dua puluh minit. Rentak yang perlahan itulah irama Jalan Huimin. Ia percuma untuk masuk, hanya belok dari Menara Gendang, dan dibuka sepanjang hari."
+          ],
+          "en-US": [
+            "Welcome to the Muslim Quarter, the liveliest, most down-to-earth corner of Xi'an.",
+            "Over a thousand years ago, Arab and Persian merchants came to Chang'an along the Silk Road and settled here; their descendants still live in this area today, forming the city's Muslim community.",
+            "The street you are on, Beiyuanmen, is the main thoroughfare, paved with flagstones and lined with shops; the true \"Hui quarter\" is a far larger maze of lanes — Beiguangji Street, Huajue Lane, Sajinqiao — that takes two or three hours to wander.",
+            "More than sixty thousand Hui Muslims live here: elders in white caps chat at doorways, women busy themselves making snacks, and children dart through the narrow alleys — a genuine old community that has lived on for over a thousand years.",
+            "Scattered through the quarter are ten mosques large and small; the most famous, Huajue Lane Mosque, hides Arabic Islamic patterns inside Chinese upturned eaves, the two styles blending seamlessly.",
+            "For food, this is the densest hub of northwestern halal cuisine, with nearly three hundred kinds of snacks crowding the street: lamb paomo, roujiamo, zenggao, persimmon cakes — the aromas mingle, and it is hard to leave empty-handed.",
+            "Eating paomo cannot be rushed: you tear the bread into pea-sized pieces yourself — the smaller, the tastier — a bowl takes twenty minutes. That unhurried pace is the rhythm of the Muslim Quarter. It is free to enter, just a turn off from the Drum Tower, and open all day."
+          ]
+        },
+        "duration": 95
+      },
+      "spots": [
+        {
+          "slug": "bell-tower",
+          "order": 1,
+          "emoji": "🕰️",
+          "image": "/images/spots/bell-tower.webp",
+          "name": {
+            "zh-CN": "钟楼",
+            "ms-MY": "Menara Loceng",
+            "en-US": "Bell Tower"
+          },
+          "transcript": {
+            "zh-CN": [
+              "钟楼始建于明洪武年间，是西安的城市地标，位于古城中心，四条大街在此交汇。",
+              "楼体为木结构，重檐四角、金碧辉煌，登楼可俯瞰西安城，感受古城的方正格局。",
+              "它与远处的鼓楼遥相呼应，构成了“晨钟暮鼓”的古城记忆。"
+            ],
+            "ms-MY": [
+              "Menara Loceng, dibina pada zaman Hongwu Dinasti Ming, ialah mercu tanda Xi'an di tengah-tengah bandar lama, tempat empat jalan utama bertemu.",
+              "Struktur kayu dengan atap berganda, ia bersinar keemasan; naik ke atas untuk melihat Xi'an dan merasai grid bandar purba.",
+              "Bergema dengan Menara Gendang di kejauhan, ia mengekalkan ingatan bandar lama 'loceng pagi, gendang petang'."
+            ],
+            "en-US": [
+              "The Bell Tower, built in the Hongwu era of the Ming Dynasty, is a Xi'an landmark at the very center of the old city, where four main streets meet.",
+              "A timber structure with double eaves, it gleams in gold; climb it to overlook Xi'an and feel the grid of the ancient city.",
+              "Echoing the Drum Tower in the distance, it preserves the old-city memory of \"morning bell, evening drum\"."
+            ]
+          },
+          "duration": 50
+        },
+        {
+          "slug": "drum-tower",
+          "order": 2,
+          "emoji": "🥁",
+          "image": "/images/spots/drum-tower.webp",
+          "name": {
+            "zh-CN": "鼓楼",
+            "ms-MY": "Menara Gendang",
+            "en-US": "Drum Tower"
+          },
+          "transcript": {
+            "zh-CN": [
+              "鼓楼与钟楼遥相呼应，形成“晨钟暮鼓”的古制。",
+              "楼内陈列着历代各式鼓，介绍鼓文化，登楼还能俯瞰回民街的街巷烟火。",
+              "鼓楼旁边就是热闹的回民街美食区，从这儿拐进去就能开逛。"
+            ],
+            "ms-MY": [
+              "Menara Gendang bergema dengan Menara Loceng, membentuk tradisi purba 'loceng pagi dan gendang petang'.",
+              "Di dalamnya dipamerkan pelbagai gendang dari banyak dinasti, dan dari puncaknya anda boleh melihat lorong-lorong Jalan Huimin.",
+              "Kawasan makanan Jalan Huimin yang meriah terletak betul-betul di sebelahnya — belok ke sini untuk mula menjelajah."
+            ],
+            "en-US": [
+              "The Drum Tower echoes the Bell Tower, forming the ancient custom of \"morning bell and evening drum\".",
+              "Inside, drums of many dynasties are on display, and from the top you can overlook the lanes of the Muslim Quarter.",
+              "The bustling Muslim Quarter food area lies right beside it — turn in here to start exploring."
+            ]
+          },
+          "duration": 50
+        },
+        {
+          "slug": "gao-courtyard",
+          "order": 3,
+          "emoji": "🏮",
+          "image": "/images/spots/gao-courtyard.webp",
+          "name": {
+            "zh-CN": "高家大院",
+            "ms-MY": "Kediaman Keluarga Gao",
+            "en-US": "Gao Family Courtyard"
+          },
+          "transcript": {
+            "zh-CN": [
+              "高家大院是保存完好的清代民居，建于明崇祯年间，是关中传统宅院的代表。",
+              "院内可观赏皮影戏、秦腔等传统演出，还能看到绣楼、书房等老建筑。",
+              "青砖灰瓦、雕梁画栋，尽显关中民居的古朴韵味。"
+            ],
+            "ms-MY": [
+              "Kediaman Keluarga Gao ialah rumah kediaman Dinasti Qing yang terpelihara baik sejak zaman Chongzhen Dinasti Ming — contoh baik rumah agam Guanzhong.",
+              "Di dalamnya anda boleh menikmati wayang kulit dan opera Qinqiang, serta melihat bangunan lama seperti menara sulaman dan bilik bacaan.",
+              "Bata kelabu, rasuk berukir dan kasau bercatnya memaparkan keunikan kediaman Guanzhong."
+            ],
+            "en-US": [
+              "The Gao Family Courtyard is a well-preserved Qing residence dating to the Chongzhen era of the Ming Dynasty — a fine example of a Guanzhong mansion.",
+              "Inside you can enjoy shadow puppetry and Qinqiang opera, and see old structures like the embroidered tower and study.",
+              "Its grey bricks, carved beams and painted rafters capture the rustic charm of Guanzhong dwellings."
+            ]
+          },
+          "duration": 50
+        },
+        {
+          "slug": "huajue-mosque",
+          "order": 4,
+          "emoji": "🕌",
+          "image": "/images/spots/huajue-mosque.jpeg",
+          "name": {
+            "zh-CN": "化觉巷清真大寺",
+            "ms-MY": "Masjid Lorong Huajue",
+            "en-US": "Huajue Lane Mosque"
+          },
+          "transcript": {
+            "zh-CN": [
+              "化觉巷清真大寺始建于唐代，是中国现存最完整、最具特色的清真寺之一。",
+              "寺内建筑融合了中国传统庭院与伊斯兰风格——中式大殿、飞檐翘角，却装饰着阿拉伯文的伊斯兰图案。",
+              "它是回民街深厚历史与多元文化的见证，也是丝绸之路商贸与文化交流的直观印记。"
+            ],
+            "ms-MY": [
+              "Masjid Lorong Huajue, diasaskan pada Dinasti Tang, antara masjid tertua yang paling lengkap dan tersendiri di China.",
+              "Seni binanya menggabungkan halaman tradisional Cina dengan gaya Islam — dewan Cina dan atap melengkung dihiasi kaligrafi Arab.",
+              "Ia menjadi saksi kepada sejarah mendalam dan kepelbagaian budaya Jalan Huimin, kesan hidup perdagangan dan pertukaran Jalan Sutera."
+            ],
+            "en-US": [
+              "Huajue Lane Mosque, founded in the Tang Dynasty, is among China's most complete and distinctive surviving mosques.",
+              "Its architecture blends traditional Chinese courtyards with Islamic style — Chinese halls and upturned eaves adorned with Arabic calligraphy.",
+              "It bears witness to the Muslim Quarter's deep history and multiculturalism, a living trace of Silk Road trade and exchange."
+            ]
+          },
+          "duration": 52
+        }
+      ],
+      "tips": {
+        "zh-CN": {
+          "openHours": "全天开放（夜市更热闹）",
+          "ticketPrice": "免费",
+          "suggestedDuration": "1–2 小时",
+          "transport": "地铁 2 号线“钟楼站”下车即到",
+          "tips": "建议错峰用餐，量力而行品尝多样小吃；注意饮食卫生。"
+        },
+        "ms-MY": {
+          "openHours": "Buka sepanjang hari (pasar malam lebih meriah)",
+          "ticketPrice": "Percuma",
+          "suggestedDuration": "1–2 jam",
+          "transport": "Stesen 'Menara Loceng' Laluan Metro 2, turun sahaja sampai",
+          "tips": "Disarankan makan di luar waktu puncak, cuba pelbagai makanan secara sederhana; beri perhatian kepada kebersihan makanan."
+        },
+        "en-US": {
+          "openHours": "Open all day (the night market is livelier)",
+          "ticketPrice": "Free",
+          "suggestedDuration": "1–2 hours",
+          "transport": "Metro Line 2 to Bell Tower Station",
+          "tips": "Avoid peak dining hours; sample many snacks in moderation; mind food hygiene."
+        }
+      }
+    },
+    {
+      "id": "big-wild-goose-pagoda",
+      "slug": "big-wild-goose-pagoda",
+      "order": 3,
+      "coords": {
+        "lat": 34.2189,
+        "lng": 108.9617
+      },
+      "emoji": "🛕",
+      "accent": "#2f6f8f",
+      "image": "/images/attractions/big-wild-goose-pagoda.webp",
+      "name": {
+        "zh-CN": "大雁塔",
+        "ms-MY": "Pagoda Angsa Liar",
+        "en-US": "Big Wild Goose Pagoda"
+      },
+      "intro": {
+        "zh-CN": "大雁塔位于大慈恩寺内，是唐代高僧玄奘为保存从天竺带回的佛经而主持修建，塔高约 64 米，是西安的标志性古建筑。",
+        "ms-MY": "Pagoda Angsa Liar terletak di dalam Kuil Da Ci'en, dibina di bawah arahan sami terkenal Dinasti Tang, Xuanzang, untuk menyimpan kitab Buddha yang dibawanya dari India, setinggi kira-kira 64 meter, merupakan bangunan purba ikonik Xi'an.",
+        "en-US": "The Big Wild Goose Pagoda sits inside Da Ci'en Temple, built by the Tang master Xuanzang to store Buddhist sutras brought back from India. About 64 meters tall, it is an iconic landmark of Xi'an."
+      },
+      "track": {
+        "title": {
+          "zh-CN": "语音讲解",
+          "ms-MY": "Panduan audio",
+          "en-US": "Audio Guide"
+        },
+        "transcript": {
+          "zh-CN": [
+            "欢迎来到大雁塔，西安最负盛名的千年古塔。",
+            "它由唐代高僧玄奘主持修建。公元629年，玄奘从长安出发，沿丝绸之路西行，穿越沙漠、翻过雪山，历经十七年才回到长安，带回佛经六百五十七部。",
+            "为了珍藏这些经卷，公元652年，玄奘在皇帝支持下亲自设计建造了这座塔；它最初是五层，武则天时期加高到十层，历经战火与地震，如今为七层、高约64米。",
+            "这座塔的设计灵感来自印度，却结合了中国传统的砖仿木结构，从下往上逐层收窄，四面各有拱形门洞——它本身就是古代中印文化交流的结晶。",
+            "沿着塔内木梯盘旋而上，每登一层，门洞外的视野就开阔一分；到了顶层，整个西安城尽收眼底。",
+            "塔下的大慈恩寺是玄奘译经的地方，南门两侧至今立着唐太宗与唐高宗亲自撰写的两块碑文。",
+            "唐代科举放榜后，考中的进士会结伴来此题名留念，称“雁塔题名”。若傍晚来，还能在南广场看一场音乐喷泉。"
+          ],
+          "ms-MY": [
+            "Selamat datang ke Pagoda Angsa Liar, menara purba paling terkenal di Xi'an.",
+            "Ia dibina di bawah arahan sami Tang, Xuanzang. Pada 629, beliau bertolak dari Chang'an ke barat melalui Jalan Sutera, merentas padang pasir dan gunung; tujuh belas tahun kemudian beliau pulang dengan 657 jilid kitab Buddha.",
+            "Untuk menyimpan kitab-kitab ini, pada 652 Xuanzang mereka bentuk dan menyelia pembinaan pagoda dengan sokongan maharaja. Mula-mula lima tingkat, kemudian dinaikkan kepada sepuluh di bawah Maharani Wu Zetian, kini ia berdiri tujuh tingkat — kira-kira 64 meter.",
+            "Diilhamkan dari India namun dibina dengan teknik bata-dan-kayu tradisional China, ia mengecil ke atas tingkat demi tingkat, dengan pintu lengkung pada setiap sisi — bukti hidup pertukaran budaya China–India purba.",
+            "Naiki tangga kayu di dalamnya, pemandangan semakin luas setiap tingkat; dari puncak, seluruh Xi'an terbentang di hadapan anda.",
+            "Di bawah berdiri Kuil Da Ci'en, tempat Xuanzang menterjemah kitab; dua tugu oleh Maharaja Taizong dan Maharaja Gaozong masih tegak di pintu selatan.",
+            "Selepas peperiksaan empayar, para sarjana yang berjaya akan datang mengukir nama mereka di sini — 'Inskripsi Pagoda Angsa Liar'. Datang pada waktu senja untuk turut menikmati pancutan air muzik di dataran selatan."
+          ],
+          "en-US": [
+            "Welcome to the Big Wild Goose Pagoda, Xi'an's most celebrated ancient tower.",
+            "It was built under the Tang master Xuanzang. In 629, he left Chang'an and traveled west along the Silk Road, crossing deserts and mountains; seventeen years later he returned with 657 volumes of Buddhist scriptures.",
+            "To store these scriptures, in 652 Xuanzang designed and supervised the pagoda's construction with the emperor's support. First five stories, later raised to ten under Empress Wu Zetian, it now stands seven stories tall — about 64 meters.",
+            "Inspired by India yet built with traditional Chinese brick-and-wood techniques, it tapers upward story by story, with arched doors on each side — a living testament to ancient China–India cultural exchange.",
+            "Climb the wooden stairs inside, and the view widens with every level; from the top, all of Xi'an spreads before you.",
+            "Below stands Da Ci'en Temple, where Xuanzang translated the scriptures; two steles by Emperor Taizong and Emperor Gaozong still stand by the south gate.",
+            "After the imperial exams, successful scholars would come to inscribe their names here — the \"Wild Goose Pagoda Inscriptions\". Come at dusk to also enjoy the musical fountain on the south square."
+          ]
+        },
+        "duration": 90
+      },
+      "spots": [
+        {
+          "slug": "cien-temple",
+          "order": 1,
+          "emoji": "🏯",
+          "image": "/images/spots/cien-temple.webp",
+          "name": {
+            "zh-CN": "大慈恩寺",
+            "ms-MY": "Kuil Da Ci'en",
+            "en-US": "Da Ci'en Temple"
+          },
+          "transcript": {
+            "zh-CN": [
+              "大慈恩寺建于公元648年，是唐代皇家寺院，也是长安规模最大、地位最高的佛寺之一。",
+              "玄奘法师曾在此翻译佛经、创立唯识宗，这里因此被称作唯识宗的发源地。",
+              "寺院历经多次修缮重建，仍保留唐代皇家寺院的恢弘格局，是丝绸之路佛教文化的重要节点。"
+            ],
+            "ms-MY": [
+              "Kuil Da Ci'en dibina pada 648 sebagai kuil diraja Dinasti Tang, antara yang terbesar dan paling berprestij di Chang'an.",
+              "Sami Xuanzang menterjemah kitab dan mengasaskan mazhab Faxiang di sini, menjadikannya tempat lahir mazhab tersebut.",
+              "Dibina semula berkali-kali, ia masih mengekalkan susun atur diraja Tang yang megah dan kekal sebagai nod penting budaya Buddha Jalan Sutera."
+            ],
+            "en-US": [
+              "Da Ci'en Temple was founded in 648 as a royal temple of the Tang Dynasty, among the largest and most prestigious in Chang'an.",
+              "Master Xuanzang translated sutras and founded the Faxiang school here, making it the school's birthplace.",
+              "Rebuilt many times, it still keeps its grand Tang royal layout and remains a key node of Silk Road Buddhist culture."
+            ]
+          },
+          "duration": 50
+        },
+        {
+          "slug": "grand-hall",
+          "order": 2,
+          "emoji": "🛕",
+          "image": "/images/spots/grand-hall.webp",
+          "name": {
+            "zh-CN": "大雄宝殿",
+            "ms-MY": "Dewan Buddha Besar",
+            "en-US": "Grand Buddha Hall"
+          },
+          "transcript": {
+            "zh-CN": [
+              "大雄宝殿是大慈恩寺的主殿，位于寺院中轴线正中心，是寺内规格最高、规模最大的建筑。",
+              "殿内供奉三座主佛与十八罗汉，佛像造型精美、神态庄严，常年香火旺盛。",
+              "飞檐翘角、彩绘精美，尽显皇家寺院的庄重风范。"
+            ],
+            "ms-MY": [
+              "Dewan Buddha Besar ialah dewan utama kuil pada paksi tengah — bangunan terbesar dan tertinggi kedudukannya.",
+              "Ia menempatkan tiga Buddha utama dan lapan belas arhat, patung-patungnya diukir halus dan penuh kemuliaan, dengan pengunjung yang tidak putus-putus.",
+              "Atapnya yang melengkung dan lukisan halus memaparkan keagungan kuil diraja."
+            ],
+            "en-US": [
+              "The Grand Buddha Hall is the temple's main hall on the central axis — its largest and highest-ranking building.",
+              "It enshrines three main Buddhas and eighteen arhats, their statues finely carved and solemn, drawing a constant stream of worshippers.",
+              "Its upturned eaves and fine murals convey the dignity of a royal temple."
+            ]
+          },
+          "duration": 50
+        },
+        {
+          "slug": "xuanzang-courtyard",
+          "order": 3,
+          "emoji": "🧭",
+          "image": "/images/spots/xuanzang-courtyard.webp",
+          "name": {
+            "zh-CN": "三藏法师院",
+            "ms-MY": "Kawasan Xuanzang",
+            "en-US": "Xuanzang Courtyard"
+          },
+          "transcript": {
+            "zh-CN": [
+              "三藏法师院又称玄奘三藏院，是国内规模最大的玄奘主题纪念馆，2000年建成，为仿唐风格建筑群。",
+              "院内通过浮雕、木雕、文物复刻等形式，讲述玄奘取经、译经、弘法的一生。",
+              "中院供奉玄奘铜像与珍贵舍利，是缅怀高僧、传承西行精神的圣地。"
+            ],
+            "ms-MY": [
+              "Kawasan Xuanzang ialah memorial terbesar di China untuk sami Xuanzang, disiapkan pada 2000 dalam gaya Tang.",
+              "Melalui ukiran timbul, ukiran kayu dan replika artifak, ia menceritakan perjalanannya mendapatkan kitab, terjemahan dan penyebaran ajarannya.",
+              "Patung gangsa dan relik suci di dewan tengah menghormati sami agung ini — tempat suci bagi semangat pengembaraan ke baratnya."
+            ],
+            "en-US": [
+              "The Xuanzang Courtyard is China's largest memorial to the monk, completed in 2000 in the Tang style.",
+              "Through reliefs, wood carvings and replica relics, it recounts his journey for scriptures, his translation and his teaching.",
+              "A bronze statue and precious relics in the central hall honor the great monk — a shrine to his spirit of westward pilgrimage."
+            ]
+          },
+          "duration": 52
+        },
+        {
+          "slug": "north-fountain",
+          "order": 4,
+          "emoji": "⛲",
+          "image": "/images/spots/north-fountain.webp",
+          "name": {
+            "zh-CN": "北广场音乐喷泉",
+            "ms-MY": "Pancuran Air Dataran Utara",
+            "en-US": "North Square Fountain"
+          },
+          "transcript": {
+            "zh-CN": [
+              "北广场音乐喷泉是亚洲规模最大的矩阵式音乐喷泉，位于大雁塔正前方。",
+              "表演时，上千组喷头与彩色灯光随音乐节奏起伏变换，配合千年古塔的背景，唯美震撼。",
+              "每日定时演出，全程免费对外开放，是游览大雁塔必体验的景观。"
+            ],
+            "ms-MY": [
+              "Pancuran air Dataran Utara ialah pancuran air muzik gaya matriks terbesar di Asia, betul-betul di hadapan pagoda.",
+              "Lebih seribu muncung dan lampu berwarna menari mengikut muzik berlatarbelakangkan menara purba — pemandangan yang menakjubkan.",
+              "Ia dipersembahkan mengikut jadual harian, percuma untuk semua, dan wajib dilihat ketika melawat pagoda."
+            ],
+            "en-US": [
+              "The North Square fountain is Asia's largest matrix-style musical fountain, right in front of the pagoda.",
+              "Over a thousand jets and colorful lights dance to the music against the backdrop of the ancient tower — a stunning sight.",
+              "It performs on a daily schedule, free to all, and is a must-see when visiting the pagoda."
+            ]
+          },
+          "duration": 52
+        },
+        {
+          "slug": "south-statue",
+          "order": 5,
+          "emoji": "🗿",
+          "image": "/images/spots/south-statue.jpeg",
+          "name": {
+            "zh-CN": "南广场玄奘像",
+            "ms-MY": "Patung Xuanzang Dataran Selatan",
+            "en-US": "South Square Statue"
+          },
+          "transcript": {
+            "zh-CN": [
+              "大雁塔南广场中心，矗立着一座高21米的玄奘法师铜像。",
+              "法师身披袈裟、手持锡杖、目光坚定，生动还原了他西行取经、不畏艰难的坚毅姿态。",
+              "雕像面朝大雁塔、背靠大唐不夜城，是片区的核心打卡地标。"
+            ],
+            "ms-MY": [
+              "Di tengah dataran selatan berdiri patung gangsa Sami Xuanzang setinggi 21 meter.",
+              "Berjubah dan memegang tongkat, beliau menatap ke hadapan dengan penuh keyakinan, melambangkan perjalanan ke baratnya yang tidak gentar.",
+              "Menghadap pagoda dengan Kota Tang di belakang, ia mercu tanda utama kawasan ini."
+            ],
+            "en-US": [
+              "In the center of the south square stands a 21-meter bronze statue of Master Xuanzang.",
+              "Clad in robes and holding a staff, he gazes forward with resolve, embodying his fearless westward journey.",
+              "Facing the pagoda with the Great Tang All Day Mall behind, it is the district's signature landmark."
+            ]
+          },
+          "duration": 50
+        },
+        {
+          "slug": "great-tang-city",
+          "order": 6,
+          "emoji": "🏮",
+          "image": "/images/spots/great-tang-city.webp",
+          "name": {
+            "zh-CN": "大唐不夜城",
+            "ms-MY": "Kota Tang yang Tidak Pernah Malam",
+            "en-US": "Great Tang All Day Mall"
+          },
+          "transcript": {
+            "zh-CN": [
+              "大唐不夜城位于大雁塔南侧，是国家级特色步行街，全长2100米，以盛唐文化为核心打造。",
+              "街区遍布仿唐古建筑，夜晚灯火全开、流光溢彩，还原唐代夜市的热闹盛景。",
+              "这里汇集美食、文创、购物与古风演艺，是感受西安盛唐风情与夜游魅力的核心景点。"
+            ],
+            "ms-MY": [
+              "Kota Tang yang Tidak Pernah Malam, di selatan pagoda, ialah jalan pejalan kaki bertaraf negara sepanjang 2,100 meter, dibina berteraskan budaya Tang.",
+              "Bangunan gaya Tang-nya menyala terang pada waktu malam, menghidupkan semula kesibukan pasar malam Tang.",
+              "Dengan makanan, barangan budaya, membeli-belah dan persembahan klasik, ia teras kepada suasana Tang dan hiburan malam Xi'an."
+            ],
+            "en-US": [
+              "The Great Tang All Day Mall, south of the pagoda, is a national-level pedestrian street 2,100 meters long, built around Tang culture.",
+              "Its Tang-style buildings blaze with light at night, recreating the bustle of a Tang night market.",
+              "With food, cultural goods, shopping and period performances, it is the heart of Xi'an's Tang ambience and nightlife."
+            ]
+          },
+          "duration": 52
+        }
+      ],
+      "tips": {
+        "zh-CN": {
+          "openHours": "8:00–17:30（登塔另计）",
+          "ticketPrice": "大慈恩寺 40 元；登塔另收 25 元",
+          "suggestedDuration": "1.5–2 小时",
+          "transport": "地铁 3 / 4 号线“大雁塔站”",
+          "tips": "建议傍晚前往，可同时观赏北广场音乐喷泉表演。"
+        },
+        "ms-MY": {
+          "openHours": "8:00–17:30 (menaiki pagoda dikenakan bayaran berasingan)",
+          "ticketPrice": "Kuil Da Ci'en 40 yuan; menaiki pagoda dikenakan tambahan 25 yuan",
+          "suggestedDuration": "1.5–2 jam",
+          "transport": "Stesen 'Pagoda Angsa Liar' Laluan Metro 3 / 4",
+          "tips": "Disarankan pergi pada waktu petang, boleh serentak menonton persembahan pancutan air muzik di Dataran Utara."
+        },
+        "en-US": {
+          "openHours": "8:00–17:30 (tower climb separate)",
+          "ticketPrice": "Da Ci'en Temple 40 yuan; tower climb 25 yuan",
+          "suggestedDuration": "1.5–2 hours",
+          "transport": "Metro Line 3/4 to Dayanta Station",
+          "tips": "Visit in the late afternoon to also catch the musical fountain show."
+        }
+      }
+    }
+  ]
+}

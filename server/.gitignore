@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+
+# 预生成语音（可用 python scripts/generate-audio.py 重新生成）
+public/audio/*.mp3
+
+# 反馈上传与运行时数据
+uploads/

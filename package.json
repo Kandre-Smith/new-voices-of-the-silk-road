@@ -1,0 +1,17 @@
+{
+  "name": "silk-road-voice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "丝路新声 —— 西安三大景点 AI 语音导览系统（前后端分离，Web + PWA 移动端）",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:server && npm run build:client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "丝路新声 · Silk Road New Voice",
+  "short_name": "丝路新声",
+  "description": "西安三大景点 AI 语音导览（中文 / 马来语 / 英语）",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f1e7",
+  "theme_color": "#b0813f",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
