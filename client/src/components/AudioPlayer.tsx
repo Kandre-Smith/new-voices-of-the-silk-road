@@ -134,6 +134,20 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
     if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel();
 
     (async () => {
+      // 0) 优先用预生成音频（离线、无需 key），命中则整段模式播放
+      const preGenUrl = track.audioUrl.replace(/\.mp3$/, `-${gender}.mp3`);
+      try {
+        const r = await fetch(preGenUrl, { method: 'HEAD' });
+        if (r.ok) {
+          setMode('whole');
+          setCurrentSrc(preGenUrl);
+          setStatus('audio');
+          return;
+        }
+      } catch {
+        /* 预生成音频不存在或网络异常，继续走按需合成 */
+      }
+
       // 1) 逐句合成（并行），全部成功则用逐句真实时长
       const results = await Promise.allSettled(lines.map((l) => synthesizeTts(l, track.language, gender)));
       if (cancelled) return;

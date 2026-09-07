@@ -2,8 +2,9 @@ node_modules
 dist
 .env
 
-# 预生成语音（可用 python scripts/generate-audio.py 重新生成）
-public/audio/*.mp3
+# 按需合成产生的临时缓存（时间戳命名，如 1788428304892-0bfc27.mp3）不提交
+# 预生成的规整文件（{slug}-{lang}-{gender}.mp3）会提交
+public/audio/[0-9]*.mp3
 
 # 反馈上传与运行时数据
 uploads/
