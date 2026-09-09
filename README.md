@@ -14,7 +14,7 @@
 | 后端 | Node.js + TypeScript + Express |
 | 数据 | JSON 数据源（三景点三语内容），反馈持久化到本地 JSON 文件，可平滑替换 PostgreSQL |
 | 语音 | 可插拔 TTS 适配器：默认 edge-tts 预生成；预留 讯飞 / TTSmaker / Azure；浏览器 Web Speech API 兜底 |
-| 地图 | 自绘 SVG 地图画布（标记点 + 缩放拖拽），免外部 API key |
+| 地图 | 自绘 SVG 地图：导入 OSM 真实地理要素（水系/绿地/城区块/主干道/兵马俑博物馆建筑）+ 手绘城墙/地铁 + 3D 图钉景点标记，免外部 API key、离线可用 |
 
 ## 目录结构
 

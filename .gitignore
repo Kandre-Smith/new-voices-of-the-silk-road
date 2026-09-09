@@ -13,3 +13,6 @@ server/.env
 Thumbs.db
 *.local
 *.log
+
+# 构建缓存
+*.tsbuildinfo

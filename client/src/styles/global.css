@@ -972,11 +972,6 @@ body {
   cursor: pointer;
 }
 
-.map-marker.selected circle:nth-child(2) {
-  stroke: var(--accent);
-  stroke-width: 5;
-}
-
 .map-controls {
   position: absolute;
   right: 10px;
@@ -1355,6 +1350,80 @@ body {
   font-size: 0.88em;
   color: var(--ink-soft);
   font-weight: 400;
+}
+
+/* 关于我们 —— 富文本布局（项目背景 / 团队 / 项目目的） */
+.about-page {
+  padding-top: 6px;
+}
+
+.about-section {
+  padding: 18px 16px;
+}
+
+.about-section-title {
+  margin: 0 0 12px;
+  font-size: 1.05em;
+  font-weight: 800;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-section-title::before {
+  content: '';
+  width: 4px;
+  height: 1em;
+  border-radius: 2px;
+  background: var(--brand);
+  flex-shrink: 0;
+}
+
+.about-subtitle {
+  margin: 14px 0 6px;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--brand-deep);
+}
+
+.about-section p {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* 使命：强调卡片 */
+.about-mission {
+  background: linear-gradient(150deg, rgba(176, 129, 63, 0.12), rgba(211, 84, 0, 0.08));
+  border: 1px solid rgba(176, 129, 63, 0.28);
+  border-radius: 12px;
+  padding: 14px 14px 12px;
+  margin: 4px 0 2px;
+}
+
+.about-mission .about-subtitle {
+  margin-top: 0;
+}
+
+.about-mission-line {
+  font-size: 1.02em !important;
+  font-weight: 700;
+  color: var(--ink) !important;
+}
+
+/* 底部声明（非商用） */
+.about-footnote {
+  font-size: 0.8em !important;
+  color: var(--ink-soft) !important;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
 }
 
 /* ===== 购票预约模块（静态展示，仅兵马俑） ===== */
