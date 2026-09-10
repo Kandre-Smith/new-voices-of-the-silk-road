@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { addFeedback, listFeedback } from '../repositories/feedback.repo';
+import { config } from '../config';
 
 export const feedbackRouter = Router();
 
@@ -13,7 +14,12 @@ feedbackRouter.post('/', (req, res) => {
   }
 });
 
-// GET /api/feedback （后台查看用，演示保留）
-feedbackRouter.get('/', (_req, res) => {
+// GET /api/feedback （后台查看，需密码：header `x-admin-password` 或 query `pw`）
+feedbackRouter.get('/', (req, res) => {
+  const pw = req.header('x-admin-password') || (typeof req.query.pw === 'string' ? req.query.pw : '');
+  if (pw !== config.adminPassword) {
+    res.status(401).json({ error: 'unauthorized' });
+    return;
+  }
   res.json(listFeedback());
 });

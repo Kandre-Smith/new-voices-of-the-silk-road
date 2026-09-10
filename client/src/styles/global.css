@@ -1951,3 +1951,84 @@ body {
   font-family: inherit;
   cursor: pointer;
 }
+
+/* ===== 后台反馈管理（开发者专用） ===== */
+.admin-login {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-login-title {
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+.admin-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.admin-input:focus {
+  outline: 2px solid var(--brand);
+}
+
+.admin-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-bar .btn {
+  flex: 1;
+}
+
+.admin-feedback {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-feedback-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75em;
+  color: var(--ink-soft);
+}
+
+.admin-lang {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(176, 129, 63, 0.14);
+  color: var(--brand-deep);
+  font-weight: 600;
+}
+
+.admin-feedback-text {
+  font-size: 0.95em;
+  color: var(--ink);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.admin-feedback-imgs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-feedback-imgs img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}

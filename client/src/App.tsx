@@ -8,6 +8,7 @@ import Settings from './pages/Settings';
 import FontSize from './pages/FontSize';
 import Feedback from './pages/Feedback';
 import About from './pages/About';
+import Admin from './pages/Admin';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/settings/font" element={<FontSize />} />
       <Route path="/settings/feedback" element={<Feedback />} />
       <Route path="/settings/about" element={<About />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );

@@ -102,3 +102,21 @@ export async function submitFeedback(input: {
   if (!res.ok) throw new Error(`submit failed: ${res.status}`);
   return res.json();
 }
+
+export interface FeedbackEntry {
+  id: string;
+  text: string;
+  images: string[];
+  lang: string;
+  createdAt: string;
+}
+
+/** 后台查看反馈列表（需管理员密码，通过 header `x-admin-password` 传递） */
+export async function fetchFeedback(password: string): Promise<FeedbackEntry[]> {
+  const res = await fetch('/api/feedback', {
+    headers: { 'x-admin-password': password },
+  });
+  if (res.status === 401) throw new Error('unauthorized');
+  if (!res.ok) throw new Error(`request failed: ${res.status}`);
+  return res.json();
+}

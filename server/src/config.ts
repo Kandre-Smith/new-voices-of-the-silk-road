@@ -34,6 +34,9 @@ export const config = {
   publicDir: path.resolve(process.cwd(), 'public'),
   uploadDir: path.resolve(process.cwd(), 'uploads'),
 
+  /** 后台反馈查看页访问密码（GET /api/feedback 需携带） */
+  adminPassword: process.env.ADMIN_PASSWORD || 'admin123',
+
   /** 翻译（DeepSeek，OpenAI 兼容接口）：中文源 → 马来语 / 英语 */
   deepseek: {
     apiKey: process.env.DEEPSEEK_API_KEY || '',

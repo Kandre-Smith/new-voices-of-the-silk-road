@@ -1,6 +1,6 @@
 # 丝路新“声” · 项目宪章
 
-> 版本 v1.7 · 2026-09-10 · 适用范围：本项目全部后续开发与功能优化
+> 版本 v1.8 · 2026-09-10 · 适用范围：本项目全部后续开发与功能优化
 > 本文是项目的「最高决策依据」——遇到分歧时，以本宪章为准；重大决策变更须更新本文。
 
 ---
@@ -155,6 +155,7 @@ curl "http://localhost:3001/api/attractions?lang=ms-MY"
 ## 十二、安全与密钥管理
 
 - 所有密钥（DeepSeek、小米 MiMo、讯飞、Azure、LLM）放 `server/.env`，该文件已 `.gitignore`（TTSmaker 已弃用，仅保留 config 占位）。
+- 后台查看页密码 `ADMIN_PASSWORD` 同上放 `server/.env`，默认 `admin123`，演示后务必改强。
 - 反馈上传：图片限 3 张、文本限 1000 字，存 `server/uploads/`（前端 base64 由后端解码落盘）。
 - PWA 离线缓存 / 安装需 HTTPS 或 localhost；局域网 http 下仅作普通网页使用。
 
@@ -175,6 +176,10 @@ curl "http://localhost:3001/api/attractions?lang=ms-MY"
 3. 实现 → 过第十一节质量门槛 → 更新 README 与本宪章。
 
 ## 十五、变更记录
+
+- **v1.8 · 2026-09-10**：
+  - ① 新增开发者后台反馈查看页 `/admin`（密码保护，中文、不计入面向游客的 9 页面）：列出全部反馈（文字 / 语言 / 时间 / 图片），支持刷新与退出。
+  - ② `GET /api/feedback` 加密码校验（header `x-admin-password` 或 query `pw`），密码走 `ADMIN_PASSWORD` 环境变量，默认 `admin123`（生产务必修改）。
 
 - **v1.7 · 2026-09-10**：
   - ① 底部导航栏调整为「景区 / 导览 / 设置」三项：移除「讲解」入口（讲解页仍由首页点击景点进入），导览居中，新增「设置」。
