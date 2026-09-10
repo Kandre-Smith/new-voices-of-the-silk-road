@@ -271,62 +271,62 @@ export default function MapCanvas({ attractions, selectedSlug, routeFrom, routeT
                 transform={`translate(${p.x} ${p.y})`}
               >
                 {/* 落地投影 */}
-                <ellipse cx="0" cy="38" rx="19" ry="5.5" fill="#3a2f22" opacity="0.22" />
+                <ellipse cx="0" cy="46" rx="23" ry="6.5" fill="#3a2f22" opacity="0.24" />
                 {/* 图钉尾部 */}
-                <path d="M -11 21 L 11 21 L 0 36 Z" fill={p.accent} filter="url(#map-pin-shadow)" />
+                <path d="M -13 25 L 13 25 L 0 44 Z" fill={p.accent} filter="url(#map-pin-shadow)" />
                 {/* 照片圆头 */}
-                <circle r="23" fill="#fff" filter="url(#map-pin-shadow)" />
-                <circle r="23" fill="none" stroke={p.accent} strokeWidth="3.5" />
+                <circle r="28" fill="#fff" filter="url(#map-pin-shadow)" />
+                <circle r="28" fill="none" stroke={p.accent} strokeWidth="4" />
                 {p.image ? (
                   <image
                     href={p.image}
                     xlinkHref={p.image}
-                    x="-19"
-                    y="-19"
-                    width="38"
-                    height="38"
+                    x="-23"
+                    y="-23"
+                    width="46"
+                    height="46"
                     preserveAspectRatio="xMidYMid slice"
                     clipPath="url(#map-pin-clip)"
                   />
                 ) : (
-                  <text y="8" fontSize="22" textAnchor="middle">{p.emoji}</text>
+                  <text y="9" fontSize="26" textAnchor="middle">{p.emoji}</text>
                 )}
                 {/* 高光 */}
-                <path d="M -14 -9 A 19 19 0 0 1 14 -9" fill="none" stroke="#fff" strokeWidth="2.5" opacity="0.5" />
+                <path d="M -17 -11 A 22 22 0 0 1 17 -11" fill="none" stroke="#fff" strokeWidth="3" opacity="0.55" />
                 {/* emoji 徽标 */}
-                <g transform="translate(14 14)">
-                  <circle r="11" fill="#fff" stroke={p.accent} strokeWidth="1.5" />
-                  <text y="4.5" fontSize="13" textAnchor="middle">{p.emoji}</text>
+                <g transform="translate(17 17)">
+                  <circle r="13" fill="#fff" stroke={p.accent} strokeWidth="1.8" />
+                  <text y="5" fontSize="15" textAnchor="middle">{p.emoji}</text>
                 </g>
 
                 {/* 起/终点徽标 */}
                 {isFrom && (
-                  <g transform="translate(-20 -20)">
-                    <circle r="13" fill="var(--brand)" />
-                    <text y="4.5" fontSize="14" textAnchor="middle" fill="#fff" fontWeight="700">A</text>
+                  <g transform="translate(-24 -24)">
+                    <circle r="15" fill="var(--brand)" />
+                    <text y="5" fontSize="16" textAnchor="middle" fill="#fff" fontWeight="700">A</text>
                   </g>
                 )}
                 {isTo && (
-                  <g transform="translate(-20 -20)">
-                    <circle r="13" fill="var(--accent)" />
-                    <text y="4.5" fontSize="14" textAnchor="middle" fill="#fff" fontWeight="700">B</text>
+                  <g transform="translate(-24 -24)">
+                    <circle r="15" fill="var(--accent)" />
+                    <text y="5" fontSize="16" textAnchor="middle" fill="#fff" fontWeight="700">B</text>
                   </g>
                 )}
 
                 {/* 选中外圈 */}
                 {(isFrom || isTo || isSel) && (
-                  <circle r="29" fill="none" stroke={isTo ? 'var(--accent)' : isFrom ? 'var(--brand)' : 'var(--brand-deep)'} strokeWidth="3.5" strokeDasharray="4 4" />
+                  <circle r="35" fill="none" stroke={isTo ? 'var(--accent)' : isFrom ? 'var(--brand)' : 'var(--brand-deep)'} strokeWidth="4" strokeDasharray="5 5" />
                 )}
 
                 {/* 名称标签 */}
                 <text
-                  y="53"
-                  fontSize="19"
+                  y="70"
+                  fontSize="26"
                   textAnchor="middle"
-                  fill="#4a3a26"
-                  fontWeight="700"
+                  fill="#3a2f22"
+                  fontWeight="800"
                   stroke="#fffdf8"
-                  strokeWidth="5"
+                  strokeWidth="6"
                   paintOrder="stroke"
                   filter="url(#map-label-shadow)"
                 >

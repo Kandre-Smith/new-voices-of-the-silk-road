@@ -6,6 +6,7 @@ import { findRoute, MODE_ICON } from '../lib/routes';
 import Screen from '../components/Screen';
 import MapCanvas from '../components/MapCanvas';
 import AudioPlayer from '../components/AudioPlayer';
+import CoverImage from '../components/CoverImage';
 
 export default function Guide() {
   const { lang, t } = useApp();
@@ -111,7 +112,13 @@ export default function Guide() {
         {current && track && (
           <div className="guide-card card">
             <div className="guide-card-head">
-              <span className="guide-card-emoji">{current.emoji}</span>
+              <CoverImage
+                src={current.image}
+                alt={current.name}
+                emoji={current.emoji}
+                accent={current.accent}
+                className="guide-card-img"
+              />
               <div>
                 <div className="guide-card-name">{current.name}</div>
                 <div className="guide-card-intro">{current.intro}</div>

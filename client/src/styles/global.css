@@ -998,8 +998,11 @@ body {
   margin-bottom: 8px;
 }
 
-.guide-card-emoji {
-  font-size: 2rem;
+.guide-card-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .guide-card-name {
