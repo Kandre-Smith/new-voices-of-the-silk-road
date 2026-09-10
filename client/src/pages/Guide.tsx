@@ -66,11 +66,6 @@ export default function Guide() {
     <Screen
       title={t('guide.title')}
       nav
-      right={
-        <button className="icon-btn" onClick={() => navigate('/settings')} aria-label={t('settings.title')}>
-          ⚙️
-        </button>
-      }
     >
       <div className="page-pad">
         <div className="guide-hint">{t('guide.hint')}</div>

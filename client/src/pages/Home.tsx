@@ -83,14 +83,9 @@ export default function Home() {
       title={t('appName')}
       nav
       right={
-        <>
-          <button className="icon-btn" onClick={() => navigate('/language')} aria-label={t('language.title')}>
-            🌐
-          </button>
-          <button className="icon-btn" onClick={() => navigate('/settings')} aria-label={t('settings.title')}>
-            ⚙️
-          </button>
-        </>
+        <button className="icon-btn" onClick={() => navigate('/language')} aria-label={t('language.title')}>
+          🌐
+        </button>
       }
     >
       {loading && <div className="placeholder">{t('common.loading')}</div>}
