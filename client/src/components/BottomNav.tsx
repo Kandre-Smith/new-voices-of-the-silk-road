@@ -3,8 +3,8 @@ import { useApp } from '../store';
 
 const TABS = [
   { to: '/', key: 'nav.attractions', ico: '🏛️' },
-  { to: '/tour', key: 'nav.audio', ico: '🎧' },
   { to: '/guide', key: 'nav.guide', ico: '🗺️' },
+  { to: '/settings', key: 'nav.settings', ico: '⚙️' },
 ];
 
 export default function BottomNav() {
