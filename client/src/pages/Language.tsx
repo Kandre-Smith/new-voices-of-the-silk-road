@@ -2,8 +2,8 @@ import { useApp, type Lang } from '../store';
 import Screen from '../components/Screen';
 
 const OPTIONS: { code: Lang; label: string; flag: string }[] = [
-  { code: 'zh-CN', label: '中文', flag: '🇨🇳' },
   { code: 'ms-MY', label: 'Bahasa Melayu', flag: '🇲🇾' },
+  { code: 'zh-CN', label: '中文', flag: '🇨🇳' },
   { code: 'en-US', label: 'English', flag: '🇬🇧' },
 ];
 

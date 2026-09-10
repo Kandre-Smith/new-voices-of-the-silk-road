@@ -42,7 +42,7 @@ function readStored<T>(key: string, fallback: T): T {
 }
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() => readStored<Lang>('srv-lang', 'zh-CN'));
+  const [lang, setLangState] = useState<Lang>(() => readStored<Lang>('srv-lang', 'ms-MY'));
   const [fontScale, setFontScale] = useState<number>(() => readStored<number>('srv-font', 1));
 
   useEffect(() => {
