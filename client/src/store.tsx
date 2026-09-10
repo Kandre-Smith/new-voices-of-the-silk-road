@@ -42,11 +42,11 @@ function readStored<T>(key: string, fallback: T): T {
 }
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() => readStored<Lang>('srv-lang', 'ms-MY'));
+  const [lang, setLangState] = useState<Lang>(() => readStored<Lang>('srv-lang-v2', 'ms-MY'));
   const [fontScale, setFontScale] = useState<number>(() => readStored<number>('srv-font', 1));
 
   useEffect(() => {
-    localStorage.setItem('srv-lang', JSON.stringify(lang));
+    localStorage.setItem('srv-lang-v2', JSON.stringify(lang));
     document.documentElement.lang = lang;
   }, [lang]);
 
