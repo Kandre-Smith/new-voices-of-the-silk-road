@@ -65,7 +65,9 @@ cd client && npm run dev
 
 ## 公网 PWA（无需安装 Node）
 
-项目提供面向 Gitee Pages 的纯静态构建，景点数据、图片和 102 个三语男女声音频文件会随站点发布：
+当前正式展示地址：<https://kandre-smith.github.io/new-voices-of-the-silk-road/>
+
+项目提供面向 GitHub Pages 的纯静态构建，景点数据、图片和 102 个三语男女声音频文件会随站点发布：
 
 ```bash
 cd client
@@ -73,6 +75,8 @@ npm run build:pages
 ```
 
 构建产物位于 `client/dist`。公网版本使用 Hash 路由，兼容 Pages 子目录和页面刷新；景点、讲解、地图、行程提示、语言和字号功能均不依赖后端。反馈在静态版中仅保存在当前浏览器，本地/服务器完整版仍使用 Express 接口集中保存。
+
+当前开发与交付状态、已知限制和后续更新流程见 [`PROGRESS.md`](./PROGRESS.md)。
 
 ## 生成三语语音（可选）
 

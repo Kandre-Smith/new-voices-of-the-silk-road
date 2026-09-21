@@ -177,6 +177,13 @@ curl "http://localhost:3001/api/attractions?lang=ms-MY"
 
 ## 十五、变更记录
 
+- **v2.1 · 2026-09-21**：
+  - ① 新增无需 Node 后端的纯静态 PWA 构建，景点数据、图片及 102 个三语男女声音频随站点发布。
+  - ② 应用部署至 GitHub Pages，公网地址为 `https://kandre-smith.github.io/new-voices-of-the-silk-road/`，支持链接和二维码异地访问。
+  - ③ 使用 Hash 路由和部署前缀资源路径，兼容 Pages 项目子目录；修复“关于我们”Logo 在线显示。
+  - ④ 保留本地 Express 完整版；公网静态版反馈降级为当前浏览器本地保存。
+  - ⑤ 新增 `PROGRESS.md`，记录交付状态、限制、发布流程和下一阶段建议。
+
 - **v2.0 · 2026-09-10**：
   - ① 导览页卡片图标由 emoji 换成主景点真实照片（`CoverImage`，52×52 圆角，缺图回退渐变+emoji）。
   - ② 导览页地图三大景点标记醒目化：图钉照片头 / 图钉尾 / 投影 / emoji 角标 / 起终点徽标整体放大，景点名称标签字号 19→26 并加粗描边。
