@@ -13,7 +13,11 @@ export default function About() {
       <div className="page-pad about-page">
         {/* 品牌区 */}
         <div className="about-logo">
-          <img className="about-logo-img" src="/logo.png" alt={t('appName')} />
+          <img
+            className="about-logo-img"
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt={t('appName')}
+          />
           <div className="about-logo-name">{t('appName')}</div>
           <div className="about-logo-tag">{t('tagline')}</div>
         </div>
