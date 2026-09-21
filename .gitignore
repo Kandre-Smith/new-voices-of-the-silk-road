@@ -14,5 +14,9 @@ Thumbs.db
 *.local
 *.log
 
+# 静态版构建时由 client/scripts/prepare-static.mjs 从后端资源生成
+client/public/audio/
+client/src/data/seed.json
+
 # 构建缓存
 *.tsbuildinfo

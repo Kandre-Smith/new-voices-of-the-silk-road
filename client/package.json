@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/prepare-static.mjs",
     "build": "tsc -b && vite build",
+    "prebuild:pages": "node scripts/prepare-static.mjs",
+    "build:pages": "tsc -b && vite build --mode pages",
     "preview": "vite preview"
   },
   "dependencies": {

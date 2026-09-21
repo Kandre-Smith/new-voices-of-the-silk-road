@@ -1,11 +1,12 @@
 /* 丝路新声 —— Service Worker：只缓存应用外壳，跳过动态接口与音频（stale-while-revalidate） */
-const CACHE = 'silk-road-voice-v2';
-const PRECACHE = ['/', '/manifest.webmanifest'];
+const CACHE = 'silk-road-voice-v3';
+const BASE = new URL('./', self.location.href).pathname;
+const PRECACHE = [BASE, `${BASE}manifest.webmanifest`];
 
 /** 动态/后端资源一律交给网络，不缓存（避免旧前端、旧音频被缓存） */
 function shouldCache(url) {
   const p = new URL(url).pathname;
-  return !(p.startsWith('/api/') || p.startsWith('/audio/') || p.startsWith('/uploads/'));
+  return !p.includes('/api/') && !p.includes('/uploads/');
 }
 
 self.addEventListener('install', (event) => {

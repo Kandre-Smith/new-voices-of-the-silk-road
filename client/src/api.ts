@@ -1,4 +1,7 @@
 import type { Lang } from './store';
+import { getLocalTips, getLocalTracks, listLocalAttractions } from './staticData';
+
+const STATIC_BUILD = import.meta.env.VITE_STATIC === 'true';
 
 export interface Coords {
   lat: number;
@@ -51,19 +54,25 @@ async function getJson<T>(url: string): Promise<T> {
 }
 
 export function fetchAttractions(lang: Lang): Promise<Attraction[]> {
-  return getJson<Attraction[]>(`/api/attractions?lang=${encodeURIComponent(lang)}`);
+  return STATIC_BUILD
+    ? Promise.resolve(listLocalAttractions(lang))
+    : getJson<Attraction[]>(`/api/attractions?lang=${encodeURIComponent(lang)}`);
 }
 
 export function fetchTracks(slug: string, lang: Lang): Promise<AudioTrack[]> {
-  return getJson<AudioTrack[]>(
-    `/api/attractions/${encodeURIComponent(slug)}/tracks?lang=${encodeURIComponent(lang)}`,
-  );
+  return STATIC_BUILD
+    ? Promise.resolve(getLocalTracks(slug, lang))
+    : getJson<AudioTrack[]>(
+        `/api/attractions/${encodeURIComponent(slug)}/tracks?lang=${encodeURIComponent(lang)}`,
+      );
 }
 
 export function fetchTips(slug: string, lang: Lang): Promise<Tips> {
-  return getJson<Tips>(
-    `/api/attractions/${encodeURIComponent(slug)}/tips?lang=${encodeURIComponent(lang)}`,
-  );
+  return STATIC_BUILD
+    ? Promise.resolve(getLocalTips(slug, lang))
+    : getJson<Tips>(
+        `/api/attractions/${encodeURIComponent(slug)}/tips?lang=${encodeURIComponent(lang)}`,
+      );
 }
 
 /** 音色性别：女声 / 男声 */
@@ -75,6 +84,7 @@ export async function synthesizeTts(
   lang: Lang,
   gender: VoiceGender = 'female',
 ): Promise<string | null> {
+  if (STATIC_BUILD) return null;
   try {
     const res = await fetch('/api/tts', {
       method: 'POST',
@@ -94,6 +104,13 @@ export async function submitFeedback(input: {
   images: string[];
   lang: Lang;
 }): Promise<{ id: string }> {
+  if (STATIC_BUILD) {
+    const id = `${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
+    const entry = { ...input, id, createdAt: new Date().toISOString() };
+    const current = JSON.parse(localStorage.getItem('srv-local-feedback') || '[]') as unknown[];
+    localStorage.setItem('srv-local-feedback', JSON.stringify([entry, ...current].slice(0, 20)));
+    return { id };
+  }
   const res = await fetch('/api/feedback', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -113,6 +130,10 @@ export interface FeedbackEntry {
 
 /** 后台查看反馈列表（需管理员密码，通过 header `x-admin-password` 传递） */
 export async function fetchFeedback(password: string): Promise<FeedbackEntry[]> {
+  if (STATIC_BUILD) {
+    if (password !== 'admin123') throw new Error('unauthorized');
+    return JSON.parse(localStorage.getItem('srv-local-feedback') || '[]') as FeedbackEntry[];
+  }
   const res = await fetch('/api/feedback', {
     headers: { 'x-admin-password': password },
   });
