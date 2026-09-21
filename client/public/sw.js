@@ -1,5 +1,5 @@
 /* 丝路新声 —— Service Worker：只缓存应用外壳，跳过动态接口与音频（stale-while-revalidate） */
-const CACHE = 'silk-road-voice-v3';
+const CACHE = 'silk-road-voice-v4';
 const BASE = new URL('./', self.location.href).pathname;
 const PRECACHE = [BASE, `${BASE}manifest.webmanifest`];
 
