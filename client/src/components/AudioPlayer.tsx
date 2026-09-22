@@ -6,6 +6,22 @@ import CoverImage from './CoverImage';
 
 /** 可选的播放速度（倍速） */
 const RATES = [0.75, 1, 1.5, 2];
+const KNOB_RADIUS = 8;
+
+function clamp01(value: number): number {
+  return Math.min(1, Math.max(0, value));
+}
+
+/** 让圆点中心始终位于轨道两端以内，0/100% 时也不会伸出轨道。 */
+function positionOnTrack(ratio: number): string {
+  const p = clamp01(ratio);
+  return `calc(${KNOB_RADIUS}px + ${p * 100}% - ${p * KNOB_RADIUS * 2}px)`;
+}
+
+function fillWidth(ratio: number): string {
+  const p = clamp01(ratio);
+  return `calc(${p * 100}% - ${p * KNOB_RADIUS * 2}px)`;
+}
 
 /** 暴露给父组件（字幕点击定位）的命令式句柄 */
 export interface AudioPlayerHandle {
@@ -55,6 +71,9 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
   const [currentSrc, setCurrentSrc] = useState<string | null>(null);
   const [realWholeDuration, setRealWholeDuration] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
+  const [audioReady, setAudioReady] = useState(false);
+  const [buffering, setBuffering] = useState(false);
+  const [playPending, setPlayPendingState] = useState(false);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(0.9);
   const [gender, setGender] = useState<VoiceGender>(() => {
@@ -91,6 +110,11 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
   }, [rate]);
 
   const lines = track.transcript;
+
+  function setPendingPlay(value: boolean) {
+    pendingPlay.current = value;
+    setPlayPendingState(value);
+  }
 
   function emit(line: number, token: number) {
     const li = Math.max(0, Math.min(lines.length - 1, line));
@@ -130,12 +154,23 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
     setSegIndex(0);
     setCurrentSrc(null);
     setRealWholeDuration(null);
+    setAudioReady(false);
+    setBuffering(false);
+    setPendingPlay(false);
     emit(0, 0);
     if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel();
 
     (async () => {
       // 0) 优先用预生成音频（离线、无需 key），命中则整段模式播放
       const preGenUrl = track.audioUrl.replace(/\.mp3$/, `-${gender}.mp3`);
+      // Pages 静态版的 102 个音频在构建时已校验齐全，直接交给 <audio> 加载，
+      // 避免先 HEAD、再 GET 的双重网络往返拖慢第一次播放。
+      if (import.meta.env.VITE_STATIC === 'true') {
+        setMode('whole');
+        setCurrentSrc(preGenUrl);
+        setStatus('audio');
+        return;
+      }
       try {
         const r = await fetch(preGenUrl, { method: 'HEAD' });
         if (r.ok) {
@@ -215,8 +250,27 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
 
   function playSeg(i: number, autoplay: boolean) {
     setSegIndex(i);
-    pendingPlay.current = autoplay;
+    setPendingPlay(autoplay);
+    setAudioReady(false);
+    setBuffering(autoplay);
     setCurrentSrc(segs[i].url);
+  }
+
+  function requestAudioPlay(a: HTMLAudioElement) {
+    setPendingPlay(true);
+    setBuffering(true);
+    a.play()
+      .then(() => {
+        setPendingPlay(false);
+        setBuffering(false);
+      })
+      .catch(() => {
+        // 数据还不足或切换 src 导致播放被中断时，继续保留播放意图。
+        // 真正可播后由 onCanPlay 接手；其他错误则允许用户再次点击。
+        if (a.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) return;
+        setPendingPlay(false);
+        setBuffering(false);
+      });
   }
 
   function toggle() {
@@ -236,8 +290,13 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
     }
     const a = audioRef.current;
     if (!a) return;
-    if (a.paused) a.play().catch(() => {});
-    else a.pause();
+    if (a.paused) {
+      requestAudioPlay(a);
+    } else {
+      setPendingPlay(false);
+      setBuffering(false);
+      a.pause();
+    }
   }
 
   /** 按进度比例 seek：定位到对应句子，从该句句首开始 */
@@ -292,7 +351,7 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
     setProgress(totalSec > 0 ? t2.starts[i] / totalSec : 0);
     if (a) {
       a.currentTime = t2.starts[i];
-      a.play().catch(() => {});
+      requestAudioPlay(a);
     }
   }
 
@@ -312,14 +371,14 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
       const seg = segs[segIndex];
       const dur = seg.duration > 0 ? seg.duration : a.duration;
       const globalT = starts[segIndex] + t;
-      setProgress(globalT / totalSec);
+      setProgress(clamp01(globalT / totalSec));
       const frac = dur > 0 ? Math.min(1, t / dur) : 0;
       emit(segIndex, tokenIndexForFraction(tokenSpans(seg.text), frac));
       return;
     }
     // 整段模式
     const p = t / a.duration;
-    setProgress(p);
+    setProgress(clamp01(p));
     const t2 = sentenceTimings(lines, a.duration);
     const line = lineAtTime(t, t2);
     const start = t2.starts[line];
@@ -342,18 +401,25 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
     const a = e.currentTarget;
     a.playbackRate = rate;
     updateDuration(a);
-    if (pendingPlay.current) {
-      pendingPlay.current = false;
-      a.play().catch(() => {});
+  }
+
+  function onCanPlay(e: React.SyntheticEvent<HTMLAudioElement>) {
+    const a = e.currentTarget;
+    setAudioReady(true);
+    if (!pendingPlay.current) {
+      setBuffering(false);
+      return;
     }
+    requestAudioPlay(a);
   }
 
   function ratioFromEvent(e: { clientX: number }): number {
     const el = barRef.current;
     if (!el) return 0;
     const r = el.getBoundingClientRect();
-    if (r.width <= 0) return 0;
-    return (e.clientX - r.left) / r.width;
+    const usableWidth = r.width - KNOB_RADIUS * 2;
+    if (usableWidth <= 0) return 0;
+    return clamp01((e.clientX - r.left - KNOB_RADIUS) / usableWidth);
   }
 
   function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
@@ -373,12 +439,19 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
   }
 
   const dots = useMemo(() => {
-    const arr: { left: number; key: number }[] = [];
+    const arr: { ratio: number; key: number }[] = [];
     for (let i = 1; i < lines.length; i++) {
-      arr.push({ key: i, left: (starts[i] / totalSec) * 100 });
+      arr.push({ key: i, ratio: clamp01(starts[i] / totalSec) });
     }
     return arr;
   }, [lines.length, starts, totalSec]);
+
+  const safeProgress = clamp01(progress);
+  // 移动端可能在用户首次点击前忽略 preload，因此初始加载时仍允许点击。
+  // 用户点击后才进入等待态，保留这次播放意图，数据就绪后自动开始。
+  const audioBusy =
+    status === 'loading' ||
+    (status === 'audio' && playPending && (!audioReady || buffering));
 
   return (
     <div className={`player${compact ? ' player--compact' : ''}`}>
@@ -404,7 +477,7 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
         role="slider"
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-valuenow={Math.round(progress * 100)}
+        aria-valuenow={Math.round(safeProgress * 100)}
         aria-label={t('common.progress')}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
@@ -412,15 +485,15 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
         onPointerCancel={onPointerUp}
       >
         <div className="progress-track" />
-        <div className="progress-fill" style={{ width: `${progress * 100}%` }} />
+        <div className="progress-fill" style={{ width: fillWidth(safeProgress) }} />
         {dots.map((d) => (
-          <span key={d.key} className="progress-dot" style={{ left: `${d.left}%` }} />
+          <span key={d.key} className="progress-dot" style={{ left: positionOnTrack(d.ratio) }} />
         ))}
-        <div className="progress-knob" style={{ left: `${progress * 100}%` }} />
+        <div className="progress-knob" style={{ left: positionOnTrack(safeProgress) }} />
       </div>
 
       <div className="player-time">
-        <span>{formatTime(progress * totalSec)}</span>
+        <span>{formatTime(safeProgress * totalSec)}</span>
         <span>{formatTime(totalSec)}</span>
       </div>
 
@@ -431,10 +504,10 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
         <button
           className="play-btn"
           onClick={toggle}
-          disabled={status === 'loading'}
-          aria-label={status === 'loading' ? t('common.loading') : playing ? t('common.pause') : t('common.play')}
+          disabled={audioBusy}
+          aria-label={audioBusy ? t('common.loading') : playing ? t('common.pause') : t('common.play')}
         >
-          {status === 'loading' ? '…' : playing ? '⏸' : '▶'}
+          {audioBusy ? '…' : playing ? '⏸' : '▶'}
         </button>
         <button className="icon-btn" onClick={onNext} disabled={!hasNext} aria-label={t('common.next')}>
           ⏭
@@ -493,9 +566,22 @@ const AudioPlayer = forwardRef<AudioPlayerHandle, Props>(function AudioPlayer(
           preload="auto"
           onTimeUpdate={onAudioTime}
           onLoadedMetadata={onLoadedMetadata}
+          onCanPlay={onCanPlay}
           onDurationChange={(e) => updateDuration(e.currentTarget)}
-          onPlay={() => setPlaying(true)}
-          onPause={() => setPlaying(false)}
+          onLoadStart={() => {
+            setAudioReady(false);
+            setBuffering(true);
+          }}
+          onWaiting={() => setBuffering(true)}
+          onPlaying={() => {
+            setPendingPlay(false);
+            setPlaying(true);
+            setBuffering(false);
+          }}
+          onPause={() => {
+            setPlaying(false);
+            if (!pendingPlay.current) setBuffering(false);
+          }}
           onEnded={() => {
             if (mode === 'segments' && segIndex < segs.length - 1) {
               playSeg(segIndex + 1, true);
